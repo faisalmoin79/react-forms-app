@@ -21,7 +21,8 @@ const TableHeader = () => {
     <thead>
       <tr>
         <th>Name</th>
-        <th>Job</th>
+        <th>Role</th>
+        <th>Remove</th>
       </tr>
     </thead>
   );
@@ -33,6 +34,7 @@ const TableBody = (props) => {
       <tr key={index}>
         <td>{row.name}</td>
         <td>{row.job}</td>
+        {/* Calling the parent App method to removeCharacter */}
         <td>
           <button onClick={() => props.removeCharacter(index)}>Delete</button>
         </td>
